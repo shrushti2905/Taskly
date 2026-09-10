@@ -1,8 +1,10 @@
 const input = document.querySelector("input");
 const button = document.querySelector("button");
-const taskList = document.querySelector("ul");
+const taskList = document.querySelector("#taskList");
 
-button.addEventListener("click", function () {
+button.addEventListener("click", addTask);
+
+function addTask() {
     const task = input.value.trim();
 
     if (task === "") {
@@ -16,4 +18,4 @@ button.addEventListener("click", function () {
     taskList.appendChild(li);
 
     input.value = "";
-});
+}
